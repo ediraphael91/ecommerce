@@ -1,0 +1,6 @@
+.alinear-izquierda {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; /* Opcional, para centrar verticalmente */
+  height: 100%; /* Para que ocupe todo el alto del grid-tile */
+}

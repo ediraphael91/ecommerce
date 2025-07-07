@@ -1,0 +1,25 @@
+table {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.espacioFiltro{
+   margin-top: 10px;
+}
+
+th{
+  width: 10% ;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.anchoId{
+  width: 1%;
+}

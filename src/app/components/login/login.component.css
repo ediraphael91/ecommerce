@@ -1,0 +1,26 @@
+.body{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    background-color: #F5F5F5;
+}
+
+.login{
+  width: 100%;
+  max-width: 330px;
+  text-align: center;
+}
+
+.ancho{
+  width: 80%;
+}
+
+.anchoBoton{
+  height: 50px;
+  width: 80%;
+}
+
+.spinner{
+  margin: 0 auto;
+}

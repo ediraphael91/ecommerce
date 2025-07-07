@@ -1,0 +1,83 @@
+<h1 mat-dialog-title>{{ esEditar ? 'Editar Usuario' : 'Crear Usuario' }}</h1>
+<div mat-dialog-content>
+  <form [formGroup]="formGroup">
+    <mat-grid-list cols="3" rowHeight="2:1">
+  <mat-grid-tile>
+    <mat-form-field appearance="outline">
+          <mat-label>Nombre</mat-label>
+          <input
+            formControlName="nombre"
+            name="nombre"
+            matInput
+          />
+          <mat-error *ngIf="formGroup.get('nombre')?.hasError('required')">El nombre es obligatorio</mat-error>
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile>
+      <mat-form-field appearance="outline">
+          <mat-label>Apellido</mat-label>
+          <input
+            formControlName="apellido"
+            name="apellido"
+            matInput
+          />
+          <mat-error *ngIf="formGroup.get('apellido')?.hasError('required')">El apellido es obligatorio</mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-form-field appearance="outline">
+          <mat-label>Correo</mat-label>
+          <input
+            formControlName="correo"
+            name="correo"
+            matInput
+          />
+          <mat-error *ngIf="formGroup.get('correo')?.hasError('required')">El correo es obligatorio</mat-error>
+        </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-form-field appearance="outline">
+          <mat-label>Rol</mat-label>
+          <input formControlName="rol" name="rol" matInput/>
+          <mat-error *ngIf="formGroup.get('rol')?.hasError('required')">El rol es obligatorio</mat-error>
+        </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile>
+  <mat-form-field appearance="outline" color="accent">
+    <mat-label>F. Nacimiento</mat-label>
+    <input
+      matInput
+      [matDatepicker]="picker1"
+      formControlName="fnacimiento"
+      name="fnacimiento"
+    />
+    <mat-error *ngIf="formGroup.get('fnacimiento')?.hasError('required')">La fecha es obligatoria</mat-error>
+    <mat-hint>MM/DD/AAAA</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-datepicker #picker1></mat-datepicker>
+  </mat-form-field>
+</mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-form-field appearance="outline">
+          <mat-label>Contraseña</mat-label>
+          <input
+            type="password"
+            formControlName="password"
+            name="password"
+            matInput
+          />
+          <mat-error *ngIf="formGroup.get('password')?.hasError('required')">La contraseña es obligatorio</mat-error>
+        </mat-form-field>
+  </mat-grid-tile>
+  </mat-grid-list>
+  <div class="alinear-izquierda">
+    <mat-slide-toggle formControlName="estado" name="estado">Estado</mat-slide-toggle>
+  </div>
+  </form>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="cancelar()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="guardar()">Guardar</button>
+</div>
