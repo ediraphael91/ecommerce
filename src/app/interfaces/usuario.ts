@@ -1,10 +1,3 @@
-//export interface Usuario {
-  //usuario: string;
-  //nombre: string;
-  //apellido: string;
-  //sexo: string
-//}
-
 export interface Usuario {
   idUsuario: number;           // opcional porque se genera en el backend
   nombre: string;

@@ -10,14 +10,17 @@
   },
 
   {
-    "nombre": "Reportes",
-    "redirect": "/dashboard/reportes"
+    "nombre": "Roles",
+    "redirect": "/dashboard/roles"
   },
 
   {
-    "nombre": "Roles",
-    "redirect": "/dashboard/roles"
+    "nombre": "Cursos",
+    "redirect": "/dashboard/cursos"
+  },
+
+  {
+    "nombre": "Reportes",
+    "redirect": "/dashboard/reportes"
   }
-
-
 ]

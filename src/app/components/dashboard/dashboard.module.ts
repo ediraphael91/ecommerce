@@ -10,6 +10,7 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { ReporteComponent } from './reporte/reporte.component';
 import { AgregarUsuarioComponent } from './usuario/agregar-usuario/agregar-usuario.component';
 import { CursoComponent } from './curso/curso.component';
+import { RolComponent } from './rol/rol.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { CursoComponent } from './curso/curso.component';
     UsuarioComponent,
     ReporteComponent,
     AgregarUsuarioComponent,
-    CursoComponent
+    CursoComponent,
+    RolComponent
   ],
   imports: [
     CommonModule,
