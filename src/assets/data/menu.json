@@ -12,6 +12,12 @@
   {
     "nombre": "Reportes",
     "redirect": "/dashboard/reportes"
+  },
+
+  {
+    "nombre": "Roles",
+    "redirect": "/dashboard/roles"
   }
+
 
 ]

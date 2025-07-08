@@ -4,13 +4,14 @@ import { DashboardComponent } from './dashboard.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { ReporteComponent } from './reporte/reporte.component';
-
+import { CursoComponent } from './curso/curso.component';
 
 const routes: Routes = [
   {path: '', component: DashboardComponent, children:[
     {path: '', component: InicioComponent},
     {path: 'usuarios', component: UsuarioComponent},
-    {path: 'reportes', component: ReporteComponent}
+    {path: 'reportes', component: ReporteComponent},
+    {path: 'roles', component: CursoComponent}
 
   ]}
 ];
