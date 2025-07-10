@@ -1,5 +1,110 @@
 <div class="container">
   <mat-toolbar>
     <span>Roles</span>
+    <div class="example-spacer"></div>
+    <button  mat-raised-button color="primary">
+      Agregar
+    </button>
   </mat-toolbar>
-</div>
+      <div class="mat-elevation-z8">
+      <table class="espacioFiltro" mat-table [dataSource]="dataSource" matSort>
+        <!-- ID -->
+        <ng-container matColumnDef="idRol">
+          <th class="anchoId" mat-header-cell *matHeaderCellDef mat-sort-header>
+            ID
+          </th>
+          <td class="anchoId" mat-cell *matCellDef="let element">
+            {{ element.idRol}}
+          </td>
+        </ng-container>
+
+         <!-- NOMBRE-->
+        <ng-container matColumnDef="nombre">
+          <th class="anchoId" mat-header-cell *matHeaderCellDef mat-sort-header>
+            Nombre
+          </th>
+          <td class="anchoId" mat-cell *matCellDef="let element">
+            {{ element.nombre}}
+          </td>
+        </ng-container>
+
+         <!-- DESCRIPCION-->
+        <ng-container matColumnDef="descripcion">
+          <th class="anchoId" mat-header-cell *matHeaderCellDef mat-sort-header>
+            Descripcion
+          </th>
+          <td class="anchoId" mat-cell *matCellDef="let element">
+            {{ element.descripcion}}
+          </td>
+        </ng-container>
+
+        <!-- FECHA CREACION-->
+        <ng-container matColumnDef="fcreacion">
+          <th class="anchoId" mat-header-cell *matHeaderCellDef mat-sort-header>
+            Fecha Creación
+          </th>
+          <td class="anchoId" mat-cell *matCellDef="let element">
+            {{ element.fcreacion}}
+          </td>
+        </ng-container>
+
+        <!-- FECHA MODIFICACION-->
+        <ng-container matColumnDef="fmodificacion">
+          <th class="anchoId" mat-header-cell *matHeaderCellDef mat-sort-header>
+            Fecha Modificación
+          </th>
+          <td class="anchoId" mat-cell *matCellDef="let element">
+            {{ element.fmodificacion}}
+          </td>
+        </ng-container>
+
+        <!-- Estado -->
+        <ng-container matColumnDef="estado">
+          <th mat-header-cell *matHeaderCellDef>Estado</th>
+          <td mat-cell *matCellDef="let element">
+            <span
+              [ngClass]="{
+                'text-success': element.estado,
+                'text-danger': !element.estado
+              }"
+            >
+              {{ element.estado ? "Activo" : "Inactivo" }}
+            </span>
+          </td>
+        </ng-container>
+
+        <!-- Acciones -->
+        <ng-container matColumnDef="acciones">
+          <th mat-header-cell *matHeaderCellDef>Acciones</th>
+          <td mat-cell *matCellDef="let element" style="text-align: left">
+            <a
+              class="pointer"
+              style="color: #f29518"
+              matTooltip="Editar usuario"
+            >
+              <mat-icon>edit</mat-icon>
+            </a>
+            <a
+              class="pointer"
+              style="color: #fa0b1d"
+              matTooltip="Eliminar usuario"
+            >
+              <mat-icon>delete</mat-icon>
+            </a>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+
+      <mat-paginator
+        #paginator
+        [pageSize]="5"
+        [pageSizeOptions]="[5, 10, 20]"
+        showFirstLastButtons
+        aria-label="Select page of periodic elements"
+      >
+      </mat-paginator>
+    </div>
+  </div>
